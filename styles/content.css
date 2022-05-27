@@ -1,0 +1,220 @@
+/* Tarjetas de presentacion */
+.card{
+    margin: 1rem .5rem;
+    border-radius: .25rem;
+    padding: 1rem;
+    box-shadow: -.1rem .1rem .25rem #666;
+    overflow: hidden;
+}
+.card-header{
+    margin: -1rem -1rem 1rem;
+    padding: 1rem;
+    color: #eee;
+    background-color: #012;
+    text-transform: uppercase;
+    text-shadow: 0 0 .5rem #333;
+}
+/* Degradados de color */
+.orange-gradient{
+    background: linear-gradient(
+        to right, /* direccion: horizontal*/
+        #c62, /* color hexadecimal  rgb: (00 - FF) */
+        darkorange /* color html: 140 nombres */
+    );
+}
+.blue-gradient{
+    background: radial-gradient(
+        circle at top left, /* direccion: circulo en la esquina */
+        rgb(51,102,204), /* color decimal rgb (0 - 255) */
+        hsl(220, 50%, 40%) /* color hsl (tono, saturacion, luminosidad)*/ 
+    ); 
+}
+.yellow-gradient{
+    background: conic-gradient(
+        from 90deg, /* direccion: angulo de 90° hacia el centro*/
+        hsl(60, 80%, 50%), /* color hsl (amarillo, saturacion alta, luminosidad estandar)*/
+        hsl(45, 70%, 50%) /* color hsl (naranja, saturacion elevada, luminosidad estandar)*/
+    );
+}
+/* Contenido Principal */
+main{
+    padding: 1rem calc(50vw - 570px);
+    background: radial-gradient(circle at center, #eee, #ccc);
+}
+main section{
+    display: none;
+}
+main section:target{
+    display: block;
+}
+/* Flexbox */
+.flex:target{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex > *{
+    flex: 1 0 min(100%, 300px);
+    overflow: auto;
+}
+.flex h2{
+    flex-basis: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+[class*=col]{
+    padding: 1rem;
+    border: 2px solid #012;
+}
+.col-1{
+    width: 33.33%;
+}
+.col-2{
+    width: 66.66%;
+}
+.col-3{
+    width: 100%;
+}
+/* css-grid */
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid > * {
+    border: 2px solid #448;
+    padding: 1rem;
+    min-height: 100px;
+}
+.grid div:first-child{
+    grid-column: 2 / 4;
+}
+.grid div:nth-child(2){
+    grid-row: 1 / 6;
+}
+.grid div:nth-child(3){
+    grid-row: span 2;
+}
+.grid div:nth-last-child(2){
+    grid-column: 3;
+    grid-row: 3 / 6;
+}
+.grid div:last-child{
+    grid-column: span 3;
+}
+/* grid-template */
+.template > *{
+    border: 2px solid #66c;
+}
+.template{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: 
+        'header     header      main'
+        'aside      .           main'
+        'aside      .           main'
+        'aside      .           main'
+        'footer     footer      footer'
+        'nav        nav         nav'
+}
+#cabecera{
+    grid-area: header;
+}
+#navegacion{
+    grid-area: nav;
+}
+#principal{
+    grid-area: main;
+}
+#pie{
+    grid-area: footer;
+}
+#lateral{
+    grid-area: aside;
+}
+/* Galeria de Imagenes */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,250px), 1fr));
+    /* EXPLICACION:
+        repeat(a, b) (veces, tamaños)
+        a: 
+            auto-fit: agranda las celdas para rellenar el espacio
+            auto-fill: rellena con la cantidad de celdas necesaria
+        b: minmax(1,2) define el rango de tamaños
+    */
+    gap: .5rem;
+}
+.gallery img{
+    width: 100%;
+    border-radius: .25rem;
+    border: .5rem solid #333;
+}
+/* Estilo Mosaico */
+.masonry img{
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    /* EXPLICACION:
+        Agrandamos la imagen para que cubra todo su contenedor
+        OBJECT-FIT: determina como se debe colocar la imagen en la etiqueta
+        COVER: permite expandir la imagen proporcionalmente
+    */
+}
+.masonry img:nth-child(even){
+    grid-column: span 2;  
+    /* EXPLICACION:
+        Las imagenes que sean pares dentro de su contenedor
+        se expanden 1 columna a la derecha
+        por ende, las demas celdas se deplazan hacia la derecha
+        o hacia abajo en caso que no entren en la fila
+        
+        EJEMPLO: Expandimos la ceda 1 y 7 hasta que ocupen 2 Columnas
+
+        |1|2|3|         |1  |2|
+        |4|5|6|     =>  |3|4|5|
+        |7|8|9|         |6|7  |
+                        |8|9|
+    */
+}
+.masonry img:nth-child(odd){
+    grid-row: span 2;
+    /* EXPLICACION:
+        Las imagenes que sean impares dentro de su contenedor
+        se expanden 1 fila hacia abajo
+        por lo tanto, las demas celdas se corren hacia la derecha
+        o se desplazan hacia abajo si no entran en la fila 
+        
+        EJEMPLO: Expandimos la celda 1 y 5 hasta que ocupen 2 filas
+
+        |1|2|3|         |1|2|3|
+        |4|5|6|     =>  | |4|5|
+        |7|8|9|         |6|7| |
+                        |8|9|
+    */
+}
+/* Video de Fondo */
+/* 
+    ratio   ancho       altura
+    4:3     1.33(h)     75%(w)
+    16:9    1.78(h)     56.25%(w)
+    16:10   1.60(h)     62.5%(w)
+*/
+[class*="ratio"] .cover{
+    z-index: 0;
+}
+.ratio-4x3{
+    padding-top: 75%;
+}
+.ratio-16x9{
+    padding-top: min(56.25%, 742.5px);
+}
+.ratio-16x10{
+    padding-top: 62.5%;
+}
+video{
+    object-fit: cover;
+    opacity: .7;
+}

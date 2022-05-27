@@ -1,0 +1,17 @@
+/* Tipografia Google Fonts */   
+    @import url('https://fonts.googleapis.com/css2?family=Raleway');
+/* Reglas Generales */
+    @import url('general.css');
+/* Cabecera */
+    @import url('header.css');
+/* Contenido */
+    @import url('content.css');
+    @import url('aside.css');
+/* Pie de Pagina */
+    @import url('footer.css');
+/* Tipografia Fantasia */
+@font-face{
+    src: url('../assets/fonts/starjedise.ttf');
+    font-family: 'star wars';
+}
+@import url();

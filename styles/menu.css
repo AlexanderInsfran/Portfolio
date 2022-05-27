@@ -1,0 +1,10 @@
+.dropdown-menu{
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem;
+    color: #eee;
+    background-color: #248;
+    z-index: ;
+    text-align: l;
+
+}
