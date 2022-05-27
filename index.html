@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+        content="
+            width=device-width, 
+            initial-scale=1,
+            maximum-scale=3">
+    <title>Maquetacion Web</title>
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Cabecera Principal -->
+    <header id="header">
+        <div class="header">
+            <h1><span>A</span>lexander <span>i</span>nsfran</h1>
+            <p><strong>Presenta: </strong>Maquetacion Web</p>
+        </div>
+        <nav>
+            <a class="logo" href="#">AI</a>
+            <button class="btn">&equiv;</button>
+            <ul class="menu">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#lenguajes">Lenguajes</a></li>
+                <li><a href="#grillas">Grillas</a></li>
+                <li><a href="#galerias">Galerias</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="relative ratio-16x9">
+        <iframe class="cover"
+            width="727" 
+            height="409" 
+            src="https://www.youtube.com/embed/wevJXEw1Fzo" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </section>
+    <!-- Contenido Principal -->
+    <main>
+        <section id="lenguajes" class="flex">
+            <h2>Lenguajes FrontEnd</h2>
+            <div class="card">
+                <h3 class="card-header orange-gradient">html</h3>
+                <p>
+                    Lenguaje de marcado de hipertexto que se utiliza para definir la estructura de las paginas web, utiliza etiquetas para establecer la funcion y jerarquia de los elementos de la misma. En los ultimos se hace mucho enfasis en la semantica, que permite a los motores de busqueda indizar los contenidos del sitio con mayor facilidad.
+                </p>
+            </div>
+            <div class="card">
+                <h3 class="card-header blue-gradient">css</h3>
+                <p>
+                    Las Hojas de estilos en cascada se utilizan para definir la apariencia de los elementos de nuestra pagina web, utilizando selectores y reglas. Este lenguaje permite realizar modificaciones en la pagina a nivel visual y es ideal para proporcionar una grata experiencia de usuario, ademas de una interfaz que responda segun el tamaño de la pantalla donde se visualice.
+                    
+                </p>
+            </div>
+            <div class="card">
+                <h3 class="card-header yellow-gradient">Javascript</h3>
+                <p>
+                    Lenguaje de programacion orientada a objetos que se ejecuta directamente en el navegador, ya que no necesita ser compilado. Posee caracteristicas que permiten la manipulacion de la pagina mediante eventos o acciones de usuario, gracias a los modelos DOM y BOM que corresponden a Document Object Model y Browser Object Model.
+                </p>
+            </div>
+        </section>
+        <section id="grillas">
+            <h2>grilla con flexbox</h2>
+            <div class="row">
+                <div class="col-1">nav</div>
+                <div class="col-2 row">                    
+                    <div class="col-3">header</div>
+                    <div class="col-2">
+                        <div class="col-" style="min-height: 200px;">main</div>
+                        <div class="col-">section</div>    
+                    </div>
+                    <div class="col-1">
+                        <div class="col-">section</div>
+                        <div class="col-"  style="min-height: 200px;">aside</div>
+                    </div>
+                    <div class="col-3">footer</div>
+                </div>
+            </div>
+            <h2>grilla con CSS-grid</h2>
+            <div class="grid">
+                <div>header</div>
+                <div>nav</div>
+                <div>main</div>
+                <div>section</div>
+                <div>section</div>
+                <div>section</div>
+                <div>aside</div>
+                <div>footer</div>
+            </div>
+            <h2>Grilla con plantilla</h2>
+            <div class="template">
+                <div id="cabecera">header</div>
+                <div id="navegacion">nav</div>
+                <div id="principal">main</div>
+                <div>section</div>
+                <div>section</div>
+                <div>section</div>
+                <div id="lateral">aside</div>
+                <div id="pie">footer</div>
+            </div>
+        </section>
+        <section id="galerias">
+            <h2>Galeria de Imágenes</h2>
+            <div class="gallery">
+                <img src="assets/img/jjba-theworld-01.jpg" alt="Dibujo JJBA Stand the World">
+                <img src="assets/img/jjba-theworld-02.jpg" alt="Dibujo JJBA Stand the World">
+                <img src="assets/img/jjba-theworld-03.jpg" alt="Dibujo JJBA Stand the World">
+                <img src="assets/img/jjba-theworld-04.jpg" alt="Dibujo JJBA Stand the World">
+                <img src="assets/img/jjba-killerqueen-01.jpg" alt="Dibujo JJBA Stand Killer Queen">
+                <img src="assets/img/jjba-killerqueen-02.jpg" alt="Dibujo JJBA Stand Killer Queen">
+                <img src="assets/img/jjba-killerqueen-03.jpg" alt="Dibujo JJBA Stand Killer Queen">
+                <img src="assets/img/jjba-killerqueen-04.jpg" alt="Dibujo JJBA Stand Killer Queen">
+                <img src="assets/img/jjba-kingcrimson-01.jpg" alt="Dibujo JJBA Stand King Crimson">
+                <img src="assets/img/jjba-kingcrimson-02.jpg" alt="Dibujo JJBA Stand King Crimson">
+                <img src="assets/img/jjba-kingcrimson-03.jpg" alt="Dibujo JJBA Stand King Crimson">
+                <img src="assets/img/jjba-kingcrimson-04.jpg" alt="Dibujo JJBA Stand King Crimson">
+                <img src="assets/img/jjba-d4c-01.jpg" alt="Dibujo JJBA Stand D4C">
+                <img src="assets/img/jjba-d4c-02.jpg" alt="Dibujo JJBA Stand D4C">
+                <img src="assets/img/jjba-d4c-03.jpg" alt="Dibujo JJBA Stand D4C">
+                <img src="assets/img/jjba-d4c-04.jpg" alt="Dibujo JJBA Stand D4C">
+            </div>
+            <h2>Galeria estilo mosaico</h2>
+            <div class="gallery masonry">
+                <img src="assets/img/jjba-starplatinum-01.jpg" alt="Dibujo JJBA Stand Star Platinum">
+                <img src="assets/img/jjba-starplatinum-02.jpg" alt="Dibujo JJBA Stand Star Platinum">
+                <img src="assets/img/jjba-starplatinum-03.jpg" alt="Dibujo JJBA Stand Star Platinum">
+                <img src="assets/img/jjba-starplatinum-04.jpg" alt="Dibujo JJBA Stand Star Platinum">
+                <img src="assets/img/jjba-silverchariot-01.jpg" alt="Dibujo JJBA Stand Silver Chariot">
+                <img src="assets/img/jjba-silverchariot-02.jpg" alt="Dibujo JJBA Stand Silver Chariot">
+                <img src="assets/img/jjba-silverchariot-03.jpg" alt="Dibujo JJBA Stand Silver Chariot">
+                <img src="assets/img/jjba-silverchariot-04.jpg" alt="Dibujo JJBA Stand Silver Chariot">
+                <img src="assets/img/jjba-thefool-01.jpg" alt="Dibujo JJBA Stand The Fool">
+                <img src="assets/img/jjba-thefool-02.jpg" alt="Dibujo JJBA Stand The Fool">
+                <img src="assets/img/jjba-thefool-03.jpg" alt="Dibujo JJBA Stand The Fool">
+                <img src="assets/img/jjba-thefool-04.jpg" alt="Dibujo JJBA Stand The Fool">
+                <img src="assets/img/jjba-crazydiamond-01.jpg" alt="Dibujo JJBA Stand Crazy Diamond">
+                <img src="assets/img/jjba-crazydiamond-02.jpg" alt="Dibujo JJBA Stand Crazy Diamond">
+                <img src="assets/img/jjba-crazydiamond-03.jpg" alt="Dibujo JJBA Stand Crazy Diamond">
+                <img src="assets/img/jjba-crazydiamond-04.jpg" alt="Dibujo JJBA Stand Crazy Diamond">
+            </div>
+        </section>
+        <aside>
+            <h2>Tabla de contenidos</h2>
+            <ol class="content-table">
+                <li>iFrame
+                    <ol>
+                        <li>Tableta Grafica</li>
+                        <li>YouTube</li>
+                        <li>Scorpion</li>
+                    </ol>
+                </li>
+                <li>Lenguajes Front-End
+                    <ol>
+                        <li>HTML
+                            <ol>
+                                <li>Etiquetas</li>
+                                <li>Atributos</li>
+                            </ol>
+                        </li>
+                        <li>CSS
+                            <ol>
+                                <li>Selectores</li>
+                                <li>Reglas</li>
+                                <li>PseudoClases</li>
+                                <li>PseudoElementos</li>
+                            </ol>
+                        </li>
+                        <li>Javascript
+                            <ol>
+                                <li>DOM</li>
+                                <li>Declaraciones</li>
+                                <li>Eventos</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Sistemas de Grillas
+                    <ol>
+                        <li>Flexbox
+                            <ol>
+                                <li>justify-content</li>
+                                <li>align-items</li>
+                                <li>flex-wrap</li>
+                                <li>flex-shrink</li>
+                                <li>flex-grow</li>
+                            </ol>
+                        </li>
+                        <li>CSS-grid
+                            <ol>
+                                <li>grid-column</li>
+                                <li>grid-row</li>
+                            </ol>
+                        </li>
+                        <li>Templates
+                            <ol>
+                                <li>grid-area</li>
+                                <li>gap</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Galerias
+                    <ol>
+                        <li>ccs-grid</li>
+                        <li>responsive</li>
+                    </ol>
+                </li>
+                <li>Position
+                    <ol>
+                        <li>static</li>
+                        <li>relative</li>
+                        <li>absolute</li>
+                        <li>fixed</li>
+                        <li>Sticky</li>
+                    </ol>
+                </li>
+            </ol>
+        </aside>
+    </main>
+    <video class="fixed cover" autoplay muted loop>
+        <source src="assets/media/wet-sand.mp4">
+        <p>
+            Lo sentimos pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+        </p>
+    </video>
+    <!-- Pie de Pagina -->
+    <footer id="footer">
+        <div class="map">
+            <iframe class="cover"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.07011167833!2d-58.37812478524321!3d-34.60238856493382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1652982139826!5m2!1ses-419!2sar" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <button class="btn icon-max"></button>
+        </div>
+        <form action="" id="contact">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingresa tu Nombre Completo</label>
+            <input 
+                id="contact_name"
+                name="contact_name"
+                type="text"
+                maxlength="50"
+                pattern="[A-Za-z ñÑ]{2,50}"
+                placeholder="Nombre(*): Cristian Racedo"
+                required>
+            <div class="validation">
+                Utilice solamente letras para escribir su nombre, 
+                el mismo debe poseer entre 2 y 50 caracteres.
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                name="contact_phone"
+                type="tel"
+                pattern="[0-9]{6,18}|[\(]\d{2,8}[\)]\d{3,6}[\-]\d{3,6}"
+                placeholder="Telefono(*): (5411)0303-456"
+                required>
+            <div class="validation">
+                Coloque la caracteristica entre parentesis y utilice un guion
+                cada 3 a 6 digitos, como en el ejemplo: (5411)0303-456.
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input
+                id="contact_email" 
+                name="contact_email"
+                type="email"
+                minlength="8"
+                placeholder="Correo(*): Cristiandracedo@hotmail.com"
+                required>
+            <div class="validation">
+                Ingrese una direccion que respete la estructura "usuario@servidor", 
+                la misma debe poseer por lo menos 8 caracteres.
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="contact_consult"
+                minlength="20"
+                maxlength="200"
+                placeholder="Consulta(*): Buenas, necesito un presupuesto"
+                required></textarea>
+            <button class="btn">Enviar</button>
+            <div class="rules">
+                Todos los campos con <span>(*)</span> son obligatorios
+            </div>
+        </form>
+        <div class="social">
+            <a class="twitter" 
+                href="https://twitter.com" 
+                target="_blank" 
+                title="Seguinos en twitter">
+            </a>
+            <a class="facebook" 
+                href="https://facebook.com" 
+                target="_blank" 
+                title="Seguinos en facebook">
+            </a>
+            <a class="github" 
+                href="https://github.com" 
+                target="_blank" 
+                title="Seguinos en instagram">
+            </a>
+        </div>
+        <p class="copy">&copy;2022 Todos los derechos reservados</p>
+    </footer>
+    <!-- Scripts JS -->
+    <script src="scripts/main.js"></script>
+    <!-- EMMET 
+        
+        - padre>hijo ej: ul>li
+        <ul>
+            <li>
+        </ul>
+        
+        - el+hermano ej: h1+p
+        <h1></h1>
+        <p></p>
+
+        - el{contenido} ej: p{soy un texto}
+        <p>soy un texto</p>
+
+        - el[atributos] a[target="_blank"]
+        <a href="" target="_blank">
+    -->
+</body>
+</html>
